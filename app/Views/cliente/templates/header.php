@@ -49,12 +49,14 @@
                     <img src="assets/brand/logo_v1.png" alt="" width="150" height="75" class="d-inline-block align-text-top me-3 border-end border-bottom rounded" />
                     <span class="fs-4">Piratas do Karibe</span>
                 </a>
+                <!-- menu -->
                 <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-                    <a class="me-3 py-2 text-dark text-decoration-none" href="#">Planos</a>
-                    <a class="me-3 py-2 text-dark text-decoration-none" href="#">Empresa</a>
+                    <a class="me-3 py-2 text-dark text-decoration-none" href='planos'>Planos</a>
+                    <a class="me-3 py-2 text-dark text-decoration-none" href="empresa">Empresa</a>
                     <a class="me-3 py-2 text-dark text-decoration-none" href="#">Cadastro</a>
                     <a class="py-2 text-dark text-decoration-none" href="#">Login</a>
                 </nav>
+                <!-- menu -->
             </div>
         </div>
     </header>
