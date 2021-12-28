@@ -37,6 +37,7 @@ $routes->get('/', 'Cliente/Home::index');
 
 // rotas do cliente
 $routes->get('home', 'Cliente/Home::index');
+$routes->get('login', 'Cliente/Login::index');
 $routes->get('planos', 'Cliente/Planos::index');
 $routes->get('empresa', 'Cliente/Empresa::index');
 $routes->get('cadastro', 'Cliente/Cadastro::index');
