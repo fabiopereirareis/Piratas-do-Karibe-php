@@ -35,6 +35,7 @@ $routes->setAutoRoute(true);
 // $routes->get('/', 'Home::index');
 $routes->get('/', 'Cliente/Home::index');
 $routes->get('home', 'Cliente/Home::index');
+$routes->get('planos', 'Cliente/Planos::index');
 
 /*
  * --------------------------------------------------------------------

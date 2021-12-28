@@ -1,4 +1,4 @@
-<content class="container py-3">
+<div class="container py-3">
     <!--cards-->
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
@@ -56,4 +56,4 @@
         </div>
     </div>
     <!--cards-->
-</content>
+</div>
