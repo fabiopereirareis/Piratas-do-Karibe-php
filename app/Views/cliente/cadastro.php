@@ -1,6 +1,14 @@
 <div class="container py-3">
+
+    <?php
+    helper('form');
+    echo form_open('cliente/cadastro/novousuario');
+    ?>
+
     <!--form-->
-    <form class="row g-3 needs-validation" action="validacao_cadastro.jsp" method="post" novalidate>
+    <div class="row g-3 needs-validation" novalidate>
+        <!-- <form class="row g-3 needs-validation" method="post" novalidate> -->
+        <!-- <form class="row g-3 needs-validation" action="#" method="post" novalidate> -->
         <div class="col-md-6">
             <label for="validationCustom01" class="form-label">Nome</label>
             <input type="text" class="form-control" id="inputName" value="" name="firstname" required />
@@ -112,6 +120,8 @@
         <div class="col-12">
             <button class="btn btn-primary" type="submit" id="btn_submit">Cadastrar</button>
         </div>
-    </form>
+    </div>
     <!--form-->
+    <?= form_close() ?>
 </div>
+<script src="assets/js/form.js"></script>
