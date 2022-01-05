@@ -15,9 +15,9 @@ class CadastroModel extends Model
     protected $useSoftDeletes = true;
 
     protected $allowedFields = [
-        'nome', 'sobrenome', 'senha', 'email', 'usuario'
+        'nome', 'sobrenome', 'senha', 'email', 'usuario',
+        'logradouro', 'bairro', 'cidade', 'estado', 'cep',
     ];
-
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';

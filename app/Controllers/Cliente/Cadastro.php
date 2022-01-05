@@ -31,6 +31,7 @@ class Cadastro extends BaseController
     {
         // pegando os dados do usuário passado por parâmetro
         echo 'novo usuário';
+
         $cadastro = new CadastroModel();
 
         $firstName = $this->request->getPost('firstname');
@@ -38,11 +39,12 @@ class Cadastro extends BaseController
         $user = $this->request->getPost('user');
         $password = $this->request->getPost('password');
         $email = $this->request->getPost('email');
-        // $address = $this->request->getPost('address');
-        // $district = $this->request->getPost('district');
-        // $city = $this->request->getPost('city');
-        // $state = $this->request->getPost('state');
-        // $zipcode = $this->request->getPost('zipcode');
+        $password =  password_hash($password, PASSWORD_DEFAULT);
+        $address = $this->request->getPost('address');
+        $district = $this->request->getPost('district');
+        $city = $this->request->getPost('city');
+        $state = $this->request->getPost('state');
+        $zipcode = $this->request->getPost('zipcode');
 
         // criando um array com os dados recebidos
         $dados = [
@@ -51,6 +53,11 @@ class Cadastro extends BaseController
             'usuario' => $user,
             'senha' => $password,
             'email' => $email,
+            'logradouro' => $address,
+            'bairro' => $district,
+            'cidade' => $city,
+            'estado' => $state,
+            'cep' => $zipcode,
         ];
 
         $cadastro->insert($dados);

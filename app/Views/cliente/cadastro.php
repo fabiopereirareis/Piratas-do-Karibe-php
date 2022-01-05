@@ -103,7 +103,7 @@
         </div>
         <div class="col-md-3">
             <label for="validationCustom05" class="form-label">Cep</label>
-            <input type="text" class="form-control" id="inputZipCode" name="zipcod" required />
+            <input type="text" class="form-control" id="inputZipCode" name="zipcode" required />
             <div class="invalid-feedback">CEP inválido</div>
         </div>
         <div class="col-12">
