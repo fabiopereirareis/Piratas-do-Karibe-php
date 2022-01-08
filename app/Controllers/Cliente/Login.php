@@ -24,4 +24,43 @@ class Login extends BaseController
         echo view('cliente/' . $page, $data);
         echo view('cliente/templates/footer', $data);
     }
+
+    protected function verificarEmailSenha()
+    {
+        $email = $this->request->getPost('email');
+        $passwordOld = ($this->request->getPost('password'));
+        $password = md5($this->request->getPost('password'));
+
+        $db = \Config\Database::connect();
+        $builder = $db->table('usuarios');
+        $builder->where('email', $email);
+        $builder->where('senha', $password);
+        $builder->orWhere('senha', $passwordOld);
+
+        $resultado = $builder->countAllResults();
+
+        $retorno = false;
+
+        if ($resultado > 0) {
+            $session = \Config\Services::session();
+            $usuarioLogado = [
+                'usuario' => $email
+            ];
+
+            $retorno = true;
+
+            $session->set($usuarioLogado);
+        }
+        return $retorno;
+    }
+
+    public function Login()
+    {
+        if ($this->verificarEmailSenha()) {      
+            echo 'ok';    
+            exit;
+        } else {
+            echo 'não ok';
+        }
+    }
 }

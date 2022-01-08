@@ -17,7 +17,7 @@ class Home extends BaseController
             // Whoops, we don't have a page for that!
             throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
         }
-
+        $data['session'] = \Config\Services::session();
         $data['title'] = ucfirst($page); // Capitalize the first letter
 
         echo view('cliente/templates/header', $data);

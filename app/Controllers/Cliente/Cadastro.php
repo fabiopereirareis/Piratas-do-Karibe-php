@@ -39,7 +39,7 @@ class Cadastro extends BaseController
         $user = $this->request->getPost('user');
         $password = $this->request->getPost('password');
         $email = $this->request->getPost('email');
-        $password =  password_hash($password, PASSWORD_DEFAULT);
+        // $password =  password_hash($password, PASSWORD_DEFAULT);
         $address = $this->request->getPost('address');
         $district = $this->request->getPost('district');
         $city = $this->request->getPost('city');
@@ -51,7 +51,7 @@ class Cadastro extends BaseController
             'nome' => $firstName,
             'sobrenome' => $laststName,
             'usuario' => $user,
-            'senha' => $password,
+            'senha' => md5($password),
             'email' => $email,
             'logradouro' => $address,
             'bairro' => $district,
@@ -74,4 +74,6 @@ class Cadastro extends BaseController
         // $this->db->insert('usuarios', $dados);
         echo 'fim';
     }
+
+    
 }

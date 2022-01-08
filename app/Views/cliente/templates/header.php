@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    <h1><?= esc($title) ?></h1>
+    <h1><?= esc($_SESSION['usuario']) ?></h1>
     <header>
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
             <symbol id="check" viewBox="0 0 16 16">
@@ -54,9 +54,10 @@
                     <a class="me-3 py-2 text-dark text-decoration-none" href='planos'>Planos</a>
                     <a class="me-3 py-2 text-dark text-decoration-none" href="empresa">Empresa</a>
                     <a class="me-3 py-2 text-dark text-decoration-none" href="cadastro">Cadastro</a>
-                    <a class="py-2 text-dark text-decoration-none" href="#">Login</a>
+                    <a class="py-2 text-dark text-decoration-none" href="login">Login</a>
                 </nav>
                 <!-- menu -->
             </div>
+
         </div>
     </header>
